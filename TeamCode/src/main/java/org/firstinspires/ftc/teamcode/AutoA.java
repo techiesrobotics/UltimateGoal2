@@ -1,5 +1,8 @@
 package org.firstinspires.ftc.teamcode;
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
+
+@Disabled
 
 @Autonomous(name= "XXX Techies Autonomous A", group="Pushbot")
 public class AutoA extends TechiesAutonomous {

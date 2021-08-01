@@ -40,6 +40,7 @@ import org.firstinspires.ftc.robotcore.external.navigation.VuforiaLocalizer;
 import org.firstinspires.ftc.robotcore.external.navigation.VuforiaLocalizer.CameraDirection;
 import org.firstinspires.ftc.robotcore.external.tfod.Recognition;
 import org.firstinspires.ftc.robotcore.external.tfod.TFObjectDetector;
+import org.firstinspires.ftc.teamcode.drive.SampleMecanumDrive;
 
 import java.util.List;
 
@@ -82,7 +83,7 @@ public class TechiesAutoWithCameraDection extends LinearOpMode {
 
     private ElapsedTime runtime = new ElapsedTime();
     TechiesHardwareBot robot = new TechiesHardwareBot();
-
+    SampleMecanumDrive drive = new SampleMecanumDrive(hardwareMap);
     private static final String VUFORIA_KEY =
             " AbfemMf/////AAABmVQ5LwVH3Umfv+Oiv7oNSvcdOBa+ogwEc69mgH/qFNgbn1NXBJsX4J5R6N4SYojjxFB6eHjdTHaT3i9ZymELzgaFrPziL5B/TX2/dkxnIK5dcOjLHOZu2K3jVPYciJnwj20ZmRXSN46Y4uMdzWSJ3X1wgKovNQzZvx+7dljIonRJfLjSF5aSuoTDqEkdcsGTJ92J7jgc5jN53Vml3rAI+qPUTT8qpI8T1enV6NYublcUMpofpovmHsH9kvI+U1h9Rc8cXwbGPlr3PVoKQOwuZA0Y98Jywey6URYTswzpbMw8cWu4PMisB2ujpf0VEjiV6jjofr3OVRj6r5lEJZsnElY2mOhXdgVqJndvXYvCSpyI ";
     private VuforiaLocalizer vuforia;
@@ -314,9 +315,7 @@ public class TechiesAutoWithCameraDection extends LinearOpMode {
 
     private void DropGoal(int targetZone) {
         if (TARGET_ZONE_A == targetZone) {
-            encoderDrive(DRIVE_SPEED, -10, -10, -10, -10, 5.0);
-            encoderDrive(DRIVE_SPEED, -3, 3, -3, 3, 5.0);
-            encoderDrive(DRIVE_SPEED, -72, -72, -72, -72, 5.0);
+            DriveToAWithEncode();
 
         } else if (TARGET_ZONE_B == targetZone) {
             encoderDrive(DRIVE_SPEED, -51, -51, -51, -51, 5.0);
@@ -330,6 +329,14 @@ public class TechiesAutoWithCameraDection extends LinearOpMode {
 
         }
 
+    }
+
+    private void DriveToAWithEncode() {
+        double i = 3;
+        int i2 = 72;
+        encoderDrive(DRIVE_SPEED, -10, -10, -10, -10, 5.0);
+        encoderDrive(DRIVE_SPEED, -i, i, -i, i, 5.0);
+        encoderDrive(DRIVE_SPEED, -i2, -i2, -i2, -i2, 5.0);
     }
 
 
