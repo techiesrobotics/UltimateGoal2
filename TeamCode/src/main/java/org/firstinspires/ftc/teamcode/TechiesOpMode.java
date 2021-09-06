@@ -103,61 +103,61 @@ public class TechiesOpMode extends LinearOpMode {
                     frontrightPower   = Range.clip(drivefb - turn - drivelr, -1.0, 1.0) ;
                     backleftPower   = Range.clip(drivefb + turn - drivelr, -1.0, 1.0) ;
                     backrightPower   = Range.clip(drivefb - turn + drivelr, -1.0, 1.0) ;
-                    DcMotor shooterFront = robot.getShooter1();
-                    DcMotor shooterBack = robot.getShooter2();
+                    //DcMotor shooterFront = robot.getShooter1();
+                    //DcMotor shooterBack = robot.getShooter2();
 
                     if (gamepad1.right_trigger == 1 ) {
-                        shooterFront.setPower(.52);
-                        shooterBack.setPower(.52);
+                    //    shooterFront.setPower(.52);
+                      //  shooterBack.setPower(.52);
                     }
                     else {
-                        shooterFront.setPower(0);
-                        shooterBack.setPower(0);
+                       // shooterFront.setPower(0);
+                       // shooterBack.setPower(0);
                     }
 
 
                     if (gamepad1.right_bumper == true ) {
-                        robot.intake.setPower(1);
+                       // robot.intake.setPower(1);
                     }
                     else {
-                        robot.intake.setPower(0);
+                       // robot.intake.setPower(0);
                     }
 
                     if (gamepad1.left_trigger == 1 ) {
-                        shooterFront.setPower(.41);
-                        shooterBack.setPower(.41);
+                        //shooterFront.setPower(.41);
+                        //shooterBack.setPower(.41);
                     }
                     else {
-                        shooterFront.setPower(0);
-                        shooterBack.setPower(0);
+                     //   shooterFront.setPower(0);
+                       // shooterBack.setPower(0);
                     }
 
                     if (gamepad1.left_bumper == true ) {
-                    robot.intake.setPower(-1);
+                    //robot.intake.setPower(-1);
                     }
                     else {
-                    robot.intake.setPower(0);
+                    //robot.intake.setPower(0);
                     }
 
                     if (gamepad1.dpad_up == true ) {
-                        robot.arm.setPower(-1);
+                      //  robot.arm.setPower(-1);
                     }
                     else {
-                        robot.arm.setPower(0);
+                        //robot.arm.setPower(0);
                     }
                     if (gamepad1.dpad_down == true ) {
-                        robot.arm.setPower(1);
+                        //robot.arm.setPower(1);
                     }
                     else {
-                        robot.arm.setPower(0);
+                       // robot.arm.setPower(0);
                     }
 
                     if (gamepad1.a == true) {
-                        robot.grabber.setDirection(Servo.Direction.REVERSE);
-                        robot.grabber.setPosition(.5);
+                     //   robot.grabber.setDirection(Servo.Direction.REVERSE);
+                       // robot.grabber.setPosition(.5);
                     }
                     if (gamepad1.y == true) {
-                        robot.grabber.setPosition(0);
+                    //    robot.grabber.setPosition(0);
                     }
                 // Tank Mode uses one stick to control each wheel.
                     // - This requires no math, but it is hard to drive forward slowly and keep straight.

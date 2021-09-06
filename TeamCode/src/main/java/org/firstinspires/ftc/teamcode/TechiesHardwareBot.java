@@ -56,11 +56,11 @@ public class TechiesHardwareBot
     public DcMotor  rightDrive  = null;
     public DcMotor  leftBack    = null;
     public DcMotor  rightBack    = null;
-    public DcMotor  shooter1 = null;
-    public DcMotor  shooter2 = null;
-    public DcMotor  intake = null;
-    public DcMotor  arm = null;
-    public Servo grabber = null;
+    //public DcMotor  shooter1 = null;
+    //public DcMotor  shooter2 = null;
+    //public DcMotor  intake = null;
+    //public DcMotor  arm = null;
+    //public Servo grabber = null;
    // public static final double MID_SERVO       =  0.5 ;
     //public static final double ARM_UP_POWER    =  .5 ;
     //public static final double ARM_DOWN_POWER  = -.5 ;
@@ -81,11 +81,11 @@ public class TechiesHardwareBot
         rightDrive = hwMap.get(DcMotor.class, "frontright");
         leftBack = hwMap.get(DcMotor.class, "backleft");
         rightBack = hwMap.get(DcMotor.class, "backright");
-        shooter1 = hwMap.get(DcMotor.class, "shooter1");
-        shooter2 = hwMap.get(DcMotor.class, "shooter2");
-        intake = hwMap.get(DcMotor.class, "intake");
-        arm = hwMap.get(DcMotor.class, "arm");
-        grabber = hwMap.get(Servo.class, "grabber");
+        //shooter1 = hwMap.get(DcMotor.class, "shooter1");
+        //shooter2 = hwMap.get(DcMotor.class, "shooter2");
+        //intake = hwMap.get(DcMotor.class, "intake");
+        //arm = hwMap.get(DcMotor.class, "arm");
+        //grabber = hwMap.get(Servo.class, "grabber");
 
 
         //leftArm    = hwMap.get(DcMotor.class, "arm");
@@ -96,11 +96,11 @@ public class TechiesHardwareBot
         rightDrive.setDirection(DcMotor.Direction.FORWARD);// Set to FORWARD if using AndyMark motors
         leftBack.setDirection(DcMotor.Direction.REVERSE);
         rightBack.setDirection(DcMotor.Direction.FORWARD);
-        shooter1.setDirection(DcMotor.Direction.REVERSE);
-        shooter2.setDirection(DcMotor.Direction.FORWARD);
-        intake.setDirection(DcMotor.Direction.FORWARD);
-        arm.setDirection(DcMotor.Direction.FORWARD);
-        grabber.setDirection(Servo.Direction.REVERSE);
+        //shooter1.setDirection(DcMotor.Direction.REVERSE);
+        //shooter2.setDirection(DcMotor.Direction.FORWARD);
+        //intake.setDirection(DcMotor.Direction.FORWARD);
+        //arm.setDirection(DcMotor.Direction.FORWARD);
+        //grabber.setDirection(Servo.Direction.REVERSE);
 
         //grabber.setPosition(0);
 
@@ -109,10 +109,10 @@ public class TechiesHardwareBot
         rightDrive.setPower(0);
         leftBack.setPower(0);
         rightBack.setPower(0);
-        shooter1.setPower(0);
-        shooter2.setPower(0);
-        intake.setPower(0);
-        arm.setPower(0);
+        //shooter1.setPower(0);
+        //shooter2.setPower(0);
+        //intake.setPower(0);
+        //arm.setPower(0);
 
 
 
@@ -126,10 +126,10 @@ public class TechiesHardwareBot
         rightDrive.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
         leftBack.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
         rightBack.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
-        shooter1.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
-        shooter2.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
-        intake.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
-        arm.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+        //shooter1.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+        //shooter2.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+        //intake.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+        //arm.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
 
 
         //leftArm.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
@@ -140,7 +140,7 @@ public class TechiesHardwareBot
         leftClaw.setPosition(MID_SERVO);
         rightClaw.setPosition(MID_SERVO);*/
     }
-
+/*
     public DcMotor getShooter1()
     {
         return shooter1;
@@ -154,5 +154,5 @@ public class TechiesHardwareBot
     public DcMotor getIntake() { return intake; }
     public DcMotor getArm() { return arm; }
 
-    public Servo getGrabber() {return grabber;}
+    public Servo getGrabber() {return grabber;} */
 }

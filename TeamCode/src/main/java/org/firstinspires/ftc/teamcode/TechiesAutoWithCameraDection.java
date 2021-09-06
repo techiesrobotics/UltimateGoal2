@@ -371,69 +371,69 @@ public class TechiesAutoWithCameraDection extends LinearOpMode {
 
     private void accelerate() {
 
-        DcMotor shooter1 = robot.getShooter1();
-        DcMotor shooter2 = robot.getShooter2();
-        shooter1.setPower(.37);
-        shooter2.setPower(.37);
+        //DcMotor shooter1 = robot.getShooter1();
+        //DcMotor shooter2 = robot.getShooter2();
+       // shooter1.setPower(.37);
+        //shooter2.setPower(.37);
         sleep(3000);
 
     }
 
 
     private void shoot() {
-        DcMotor shooter1 = robot.getShooter1();
-        DcMotor shooter2 = robot.getShooter2();
-        DcMotor intake = robot.getIntake();
-        shooter1.setPower(.39);
-        shooter2.setPower(.39);
-        intake.setPower(.33);
+        //DcMotor shooter1 = robot.getShooter1();
+        //DcMotor shooter2 = robot.getShooter2();
+        //DcMotor intake = robot.getIntake();
+        //shooter1.setPower(.39);
+        //shooter2.setPower(.39);
+        //intake.setPower(.33);
         runtime.reset();
         while (opModeIsActive() && (runtime.seconds() < 5.0)) {
             telemetry.addData("Path", "Leg 3: %2.5f S Elapsed", runtime.seconds());
             telemetry.update();
         }
-        intake.setPower(0);
-        shooter1.setPower(0);
-        shooter2.setPower(0);
+        //intake.setPower(0);
+        //shooter1.setPower(0);
+        //shooter2.setPower(0);
     }
 
     private void getring(int targetZone) {
         if (TARGET_ZONE_A == targetZone) {
             sleep(1);
         } else if (TARGET_ZONE_B == targetZone) {
-            DcMotor shooter1 = robot.getShooter1();
-            DcMotor shooter2 = robot.getShooter2();
-            shooter1.setPower(-.13);
-            shooter2.setPower(-.13);
-            DcMotor intake = robot.getIntake();
-            intake.setPower(.6);
+          //  DcMotor shooter1 = robot.getShooter1();
+           // DcMotor shooter2 = robot.getShooter2();
+           // shooter1.setPower(-.13);
+           // shooter2.setPower(-.13);
+           // DcMotor intake = robot.getIntake();
+            //intake.setPower(.6);
             while (opModeIsActive() && (runtime.seconds() < 5.0)) {
                 telemetry.addData("Path", "Leg 3: %2.5f S Elapsed", runtime.seconds());
                 telemetry.update();
             }
             encoderDrive(DRIVE_SPEED_3, 30, 30, 30, 30, 5.0);
 
-            intake.setPower(0);
+            //intake.setPower(0);
         } else if (TARGET_ZONE_C == targetZone) {
             encoderDrive(DRIVE_SPEED, 25, 25, 25, 25, 5.0);
             encoderDrive(DRIVE_SPEED_6, -10, -10, -10, -10, 5.0);
-            DcMotor intake = robot.getIntake();
-            DcMotor shooter1 = robot.getShooter1();
-            DcMotor shooter2 = robot.getShooter2();
-            shooter1.setPower(-.13);
-            shooter2.setPower(-.13);
-            intake.setPower(.7);
+            //DcMotor intake = robot.getIntake();
+            //DcMotor shooter1 = robot.getShooter1();
+            //DcMotor shooter2 = robot.getShooter2();
+            //shooter1.setPower(-.13);
+            //shooter2.setPower(-.13);
+            //intake.setPower(.7);
             encoderDrive(DRIVE_SPEED_2, 23, 23, 23, 23, 5.0);
             while (opModeIsActive() && (runtime.seconds() < 4.0)) {
                 telemetry.addData("Path", "Leg 3: %2.5f S Elapsed", runtime.seconds());
                 telemetry.update();
             }
-            intake.setPower(-.5);
+            //intake.setPower(-.5);
             while (opModeIsActive() && (runtime.seconds() < .5)) {
                 telemetry.addData("Path", "Leg 3: %2.5f S Elapsed", runtime.seconds());
                 telemetry.update();
             }
-            intake.setPower(0);
+            //intake.setPower(0);
         }
     }
 
@@ -451,9 +451,9 @@ public class TechiesAutoWithCameraDection extends LinearOpMode {
             encoderDrive(DRIVE_SPEED, 58, -58, 58, -58, 5.0);
             encoderDrive(DRIVE_SPEED, -50, -50, -50, -50, 5.0);
 
-            Servo Grabber = robot.getGrabber();
-            DcMotor arm = robot.getArm();
-            arm.setPower(.4);
+            //Servo Grabber = robot.getGrabber();
+            //DcMotor arm = robot.getArm();
+            //arm.setPower(.4);
             while (opModeIsActive() && (runtime.seconds() < 1.6)) {
                 telemetry.addData("Path", "Leg 3: %2.5f S Elapsed", runtime.seconds());
                 telemetry.update();
@@ -461,11 +461,11 @@ public class TechiesAutoWithCameraDection extends LinearOpMode {
             sleep(2500);
             encoderDrive(DRIVE_SPEED, -14, 14, -14, 14, 5.0);
 
-            Grabber.setPosition(.35);
+            //Grabber.setPosition(.35);
             encoderDrive(DRIVE_SPEED, 65, -65, 65, -65, 5.0);
             encoderDrive(DRIVE_SPEED, -53, -53, -53, -53, 5.0);
-            Grabber.setPosition(0);
-            arm.setPower(-.4);
+            //Grabber.setPosition(0);
+            //arm.setPower(-.4);
             while (opModeIsActive() && (runtime.seconds() < 1.6)) {
                 telemetry.addData("Path", "Leg 3: %2.5f S Elapsed", runtime.seconds());
                 telemetry.update();
@@ -479,9 +479,9 @@ public class TechiesAutoWithCameraDection extends LinearOpMode {
             encoderDrive(DRIVE_SPEED, 58, -58, 58, -58, 5.0);
             encoderDrive(DRIVE_SPEED, -50, -50, -50, -50, 5.0);
 
-            Servo Grabber = robot.getGrabber();
-            DcMotor arm = robot.getArm();
-            arm.setPower(.4);
+            //Servo Grabber = robot.getGrabber();
+            //DcMotor arm = robot.getArm();
+            //arm.setPower(.4);
             while (opModeIsActive() && (runtime.seconds() < 1.6)) {
                 telemetry.addData("Path", "Leg 3: %2.5f S Elapsed", runtime.seconds());
                 telemetry.update();
@@ -489,14 +489,14 @@ public class TechiesAutoWithCameraDection extends LinearOpMode {
             sleep(2500);
             encoderDrive(DRIVE_SPEED, -14, 14, -14, 14, 5.0);
 
-            Grabber.setPosition(.35);
+            //Grabber.setPosition(.35);
             sleep(1000);
 
             encoderDrive(DRIVE_SPEED, -46, 46, -46, 46, 5.0);
             encoderDrive(DRIVE_SPEED, -72, -72, -72, -72, 5.0);
-            Grabber.setPosition(0);
+            //Grabber.setPosition(0);
             sleep(500);
-            arm.setPower(-.8);
+            //arm.setPower(-.8);
             while (opModeIsActive() && (runtime.seconds() < 1.6)) {
                 telemetry.addData("Path", "Leg 3: %2.5f S Elapsed", runtime.seconds());
                 telemetry.update();
@@ -506,9 +506,9 @@ public class TechiesAutoWithCameraDection extends LinearOpMode {
             encoderDrive(DRIVE_SPEED, 58, -58, 58, -58, 5.0);
             encoderDrive(DRIVE_SPEED, -50, -50, -50, -50, 5.0);
 
-            Servo Grabber = robot.getGrabber();
-            DcMotor arm = robot.getArm();
-            arm.setPower(.8);
+            //Servo Grabber = robot.getGrabber();
+            //DcMotor arm = robot.getArm();
+            //arm.setPower(.8);
             while (opModeIsActive() && (runtime.seconds() < .9)) {
                 telemetry.addData("Path", "Leg 3: %2.5f S Elapsed", runtime.seconds());
                 telemetry.update();
@@ -516,14 +516,14 @@ public class TechiesAutoWithCameraDection extends LinearOpMode {
             sleep(1100);
             encoderDrive(DRIVE_SPEED, -14, 14, -14, 14, 5.0);
 
-            Grabber.setPosition(.35);
+            //Grabber.setPosition(.35);
             sleep(700);
             encoderDrive(DRIVE_SPEED, 25, 25, 25, 25, 5.0);
             encoderDrive(DRIVE_SPEED, -53, 53, -53, 53, 5.0);
             encoderDrive(DRIVE_SPEED, -110, -110, -110, -110, 5.0);
-            Grabber.setPosition(0);
+            //Grabber.setPosition(0);
             sleep(200);
-            arm.setPower(-.8);
+            //arm.setPower(-.8);
             while (opModeIsActive() && (runtime.seconds() < .4)) {
                 telemetry.addData("Path", "Leg 3: %2.5f S Elapsed", runtime.seconds());
                 telemetry.update();

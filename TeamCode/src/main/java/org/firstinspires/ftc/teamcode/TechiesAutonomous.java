@@ -142,24 +142,24 @@ public abstract class TechiesAutonomous extends LinearOpMode {
     abstract protected void driveToLine();
     public void accelerate() {
 
-        DcMotor shooter1 = robot.getShooter1();
-        DcMotor shooter2 = robot.getShooter2();
-            shooter1.setPower(.38);
-            shooter2.setPower(.38);
+        //DcMotor shooter1 = robot.getShooter1();
+        //DcMotor shooter2 = robot.getShooter2();
+          //  shooter1.setPower(.38);
+           // shooter2.setPower(.38);
             sleep(3000);
 
         }
 
 
     public void shoot() {
-        DcMotor shooter1 = robot.getShooter1();
-        DcMotor shooter2 = robot.getShooter2();
-        DcMotor intake = robot.getIntake();
-        shooter1.setPower(.4);
-        shooter2.setPower(.4);
-        intake.setPower(.37);
+      //  DcMotor shooter1 = robot.getShooter1();
+       // DcMotor shooter2 = robot.getShooter2();
+       // DcMotor intake = robot.getIntake();
+        //shooter1.setPower(.4);
+        //shooter2.setPower(.4);
+        //intake.setPower(.37);
         sleep(5000);
-        intake.setPower(0);
+        //intake.setPower(0);
     }
 
     private void setEncoder(DcMotor.RunMode stopAndResetEncoder) {

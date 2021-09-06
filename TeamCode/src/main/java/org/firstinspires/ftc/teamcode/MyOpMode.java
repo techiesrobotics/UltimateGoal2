@@ -33,10 +33,11 @@ public class MyOpMode extends LinearOpMode {
                 .build();
                 A- 15,-40
                 B- -10, -5
+                C - -35, -40
 */
 
         Trajectory traj1 = drive.trajectoryBuilder(startPose) // kl change
-                .strafeTo(new Vector2d(-35, -40))
+                .strafeTo(new Vector2d(0, 0))
                 .build();
 
       /*  Trajectory traj2 = drive.trajectoryBuilder(traj1.end())

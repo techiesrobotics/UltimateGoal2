@@ -67,10 +67,10 @@ public class TechiesOpMode2 extends LinearOpMode {
             // Initialize the hardware variables. Note that the strings used here as parameters
             // to 'get' must correspond to the names assigned during the robot configuration
             // step (using the FTC Robot Controller app on the phone).
-            double frontleftPower;
-            double frontrightPower;
-            double backleftPower;
-            double backrightPower;
+            double frontleftPower=0;
+            double frontrightPower=0;
+            double backleftPower=0;
+            double backrightPower=0;
 
 
             // Most robots need the motor on one side to be reversed to drive forward
@@ -101,63 +101,63 @@ public class TechiesOpMode2 extends LinearOpMode {
                     frontrightPower   = Range.clip(drivefb - turn - drivelr, -1.0, 1.0) ;
                     backleftPower   = Range.clip(drivefb + turn - drivelr, -1.0, 1.0) ;
                     backrightPower   = Range.clip(drivefb - turn + drivelr, -1.0, 1.0) ;
-                    DcMotor shooterFront = robot.getShooter1();
-                    DcMotor shooterBack = robot.getShooter2();
+                    //DcMotor shooterFront = robot.getShooter1();
+                    //DcMotor shooterBack = robot.getShooter2();
 
                     if (gamepad2.right_trigger == 1 ) {
-                        shooterFront.setPower(.53);
-                        shooterBack.setPower(.53);
+                      //  shooterFront.setPower(.53);
+                      //  shooterBack.setPower(.53);
                     }
                     else {
-                        shooterFront.setPower(0);
-                        shooterBack.setPower(0);
+                       // shooterFront.setPower(0);
+                      //  shooterBack.setPower(0);
                     }
 
 
                     if (gamepad2.right_bumper == true ) {
-                        robot.intake.setPower(1);
+                       // robot.intake.setPower(1);
                     }
                     else {
-                        robot.intake.setPower(0);
+                       // robot.intake.setPower(0);
                     }
 
                     if (gamepad2.left_trigger == 1 ) {
-                        shooterFront.setPower(.41);
-                        shooterBack.setPower(.41);
+                     //   shooterFront.setPower(.41);
+                      //  shooterBack.setPower(.41);
                     }
                     else {
-                        shooterFront.setPower(0);
-                        shooterBack.setPower(0);
+                       // shooterFront.setPower(0);
+                       // shooterBack.setPower(0);
                     }
 
                     if (gamepad2.left_bumper == true ) {
-                    robot.intake.setPower(-1);
+                    //robot.intake.setPower(-1);
                     }
                     else {
-                    robot.intake.setPower(0);
+                    //robot.intake.setPower(0);
                     }
 
                     if (gamepad2.dpad_up == true ) {
-                        robot.arm.setPower(-1);
+                   //     robot.arm.setPower(-1);
                     }
                     else {
-                        robot.arm.setPower(0);
+                     //   robot.arm.setPower(0);
                     }
                     if (gamepad2.dpad_down == true ) {
-                        robot.arm.setPower(1);
+                       // robot.arm.setPower(1);
                     }
                     else {
-                        robot.arm.setPower(0);
+                       // robot.arm.setPower(0);
                     }
 
                     if (gamepad2.a == true) {
-                        if (robot.grabber.getPosition() >= 0.3) {
-                            robot.grabber.setPosition(0);
+                    //    if (robot.grabber.getPosition() >= 0.3) {
+                      //      robot.grabber.setPosition(0);
                             sleep(400);
 
                         }
                         else {
-                            robot.grabber.setPosition(0.35);
+                        //    robot.grabber.setPosition(0.35);
                             sleep(400);
                         }
                     }
@@ -182,4 +182,3 @@ public class TechiesOpMode2 extends LinearOpMode {
                     telemetry.update();
             }
         }
-    }
